@@ -24,7 +24,7 @@ stages:
    jobs:
     - job: "Build_Sysmon_Ubuntu_20_04"
       pool: 
-        name: "Sysinternals-for-Linux"
+        name: "SMARTSentinel Agent Build Pool"
         demands:
         - SYSINT_TOOL -equals sysmon   
         - SYSINT_DISTRIBUTION -equals ubuntu_20_04
