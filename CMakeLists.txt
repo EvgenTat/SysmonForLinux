@@ -50,9 +50,9 @@ cmake_policy(SET CMP0048 NEW)
 # set the project name - version is MAJOR.MINOR.PATCH.RELEASE - releases start at 1
 #
 if (DEFINED ENV{VERSION})
-  project(SysmonForLinux VERSION $ENV{VERSION})
+    project(SysmonForLinux VERSION $ENV{VERSION})
 else()
-  project(SysmonForLinux VERSION 0.0.0.0)
+    project(SysmonForLinux VERSION 1.0.2.1)
 endif()
 
 configure_file(linuxVersion.h.in linuxVersion.h)
