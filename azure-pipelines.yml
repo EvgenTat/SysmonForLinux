@@ -45,3 +45,8 @@ stages:
       - script: |
           sudo apt -y remove sysinternalsebpf
         displayName: "Remove Sysinternalsebpf dependency"
+      - task: PublishBuildArtifacts@1
+        inputs:
+          PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+          ArtifactName: 'drop'
+          publishLocation: 'Container'
