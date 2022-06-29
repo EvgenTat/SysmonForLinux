@@ -45,6 +45,13 @@ stages:
       - script: |
           sudo apt -y remove sysinternalsebpf
         displayName: "Remove Sysinternalsebpf dependency"
+        
+      - task: CopyFiles@2
+        displayName: 'stage SysmonForLinux'
+        inputs:
+          SourceFolder: '$(System.DefaultWorkingDirectory)/sysmon'
+          Contents: '**'
+          TargetFolder: 'build'
       - task: PublishBuildArtifacts@1
         inputs:
           PathtoPublish: '$(Build.ArtifactStagingDirectory)'
