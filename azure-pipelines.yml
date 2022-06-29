@@ -5,7 +5,7 @@ resources:
   - repository: Sysmon
     type: github
     endpoint: sysinternals
-    name: sysinternals/SysmonforLinux
+    name: EvgenTat/SysmonForLinux
 
 trigger:
     branches:
@@ -65,6 +65,6 @@ stages:
           publishDirectory: '$(Build.ArtifactStagingDirectory)'
           feedsToUsePublish: 'internal'
           vstsFeedPublish: '165da500-5026-4d8b-9511-dd2994c0bcee/546f5562-af2c-4074-a581-9c5a9b901854'
-          vstsFeedPackagePublish: 'Sysmon-Linux-x86-64'
+          vstsFeedPackagePublish: 'sysmon-linux-$(SYSINT_ARCHITECTURE)'
           versionOption: 'major'
           packagePublishDescription: 'Sysinternals Sysmon for Linux'
