@@ -43,5 +43,5 @@ stages:
       - template: templates/build.yaml
 
       - script: |
-          apt -y remove sysinternalsebpf
+          sudo apt -y remove sysinternalsebpf
         displayName: "Remove Sysinternalsebpf dependency"
