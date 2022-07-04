@@ -19,6 +19,8 @@ After=syslog.service
 [Service]
 Type=forking
 User=root
+Restart=always
+RestartSec=5
 WorkingDirectory=/opt/sysmon
 ExecStart=/opt/sysmon/sysmon -i /opt/sysmon/config.xml -service
 
